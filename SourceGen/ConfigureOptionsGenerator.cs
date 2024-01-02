@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 using Scriban;
 
-namespace VsaTemplate.SourceGen;
+namespace VsaApiTemplate.SourceGen;
 
 public sealed partial class Generator : IIncrementalGenerator
 {
@@ -12,7 +12,7 @@ public sealed partial class Generator : IIncrementalGenerator
 	{
 		var classes = context.SyntaxProvider
 			.ForAttributeWithMetadataName(
-				"VsaTemplate.ConfigureOptionsAttribute",
+				"VsaApiTemplate.ConfigureOptionsAttribute",
 				predicate: static (sn, ct) => true,
 				transform: static (ctx, ct) =>
 				{

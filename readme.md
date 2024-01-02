@@ -18,7 +18,7 @@ In choosing Linq2Db, the open question remains about ensuring reliability betwee
 the schema. I have developed a system that works for me to do so:
 
 * Database migration scripts are stored as `.sql` files under `Services\Database\Scripts`; these scripts are designed to be
-  strictly additive. Other than the two initial scripts (`00.VersionHistory.sql` and `01.Hangfire.v9.sql`), they should
+  strictly additive. Other than the two initial scripts (`2024-01-01.01.VersionHistory.sql` and `2024-01-01.02.Hangfire.v9.sql`), they should
   be named in a monotonically increasing format. This way a simple string sort of the filenames develops the order in
   which they should be executed against the database.
 * The `Scaffold` project builds an executable that will, as a build step: generate a blank database, execute all scripts
@@ -120,7 +120,7 @@ To run this project, do the following:
 <Project>
 
 	<PropertyGroup>
-		<ScaffoldConnectionString>Server=<server>%3BUser=<user>%3BPassword=<password>%3Bapp=VsaTemplate.scaffold</ScaffoldConnectionString>
+		<ScaffoldConnectionString>Server=<server>%3BUser=<user>%3BPassword=<password>%3Bapp=VsaApiTemplate.scaffold</ScaffoldConnectionString>
 	</PropertyGroup>
 
 </Project>
@@ -149,7 +149,7 @@ To run this project, do the following:
 		"Port": 587,
 		"Username": "apikey",
 		"Password": "<from-auth0>",
-		"FromEmailAddress": "VSA Template <no-reply@VsaTemplate.com>",
+		"FromEmailAddress": "VSA Template <no-reply@VsaApiTemplate.com>",
 		"AdminEmailAddresses": [
 			"Admin User <admin@example.com>"
 		]

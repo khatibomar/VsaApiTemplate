@@ -5,11 +5,11 @@ using LinqToDB;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SuperLinq;
-using VsaTemplate.Database;
-using VsaTemplate.Emails.Services;
-using VsaTemplate.Support;
+using VsaApiTemplate.Database;
+using VsaApiTemplate.Emails.Services;
+using VsaApiTemplate.Support;
 
-namespace VsaTemplate.Features.Jobs;
+namespace VsaApiTemplate.Features.Jobs;
 
 [ConfigureOptions]
 public sealed class DownloadAlphaVantageDataJobOptions

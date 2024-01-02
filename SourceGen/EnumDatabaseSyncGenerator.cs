@@ -5,7 +5,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 using Scriban;
 
-namespace VsaTemplate.SourceGen;
+namespace VsaApiTemplate.SourceGen;
 
 public sealed partial class Generator : IIncrementalGenerator
 {
@@ -13,7 +13,7 @@ public sealed partial class Generator : IIncrementalGenerator
 	{
 		var nodes = context.SyntaxProvider
 			.ForAttributeWithMetadataName(
-				"VsaTemplate.SyncEnumAttribute",
+				"VsaApiTemplate.SyncEnumAttribute",
 				predicate: static (sn, ct) => true,
 				transform: static (ctx, ct) =>
 				{

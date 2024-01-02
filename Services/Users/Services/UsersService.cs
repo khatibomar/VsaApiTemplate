@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Diagnostics;
 using LinqToDB;
 using SuperLinq;
-using VsaTemplate.Database;
-using VsaTemplate.Users.Models;
+using VsaApiTemplate.Database;
+using VsaApiTemplate.Users.Models;
 
-namespace VsaTemplate.Users.Services;
+namespace VsaApiTemplate.Users.Services;
 
 [RegisterScoped]
 public class UsersService

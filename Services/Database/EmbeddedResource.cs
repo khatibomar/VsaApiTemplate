@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using CommunityToolkit.Diagnostics;
 
-namespace VsaTemplate.Database;
+namespace VsaApiTemplate.Database;
 
 internal static class EmbeddedResource
 {

@@ -1,8 +1,8 @@
 ﻿using LinqToDB;
 using LinqToDB.Data;
-using VsaTemplate.Database.Models;
+using VsaApiTemplate.Database.Models;
 
-namespace VsaTemplate.Database;
+namespace VsaApiTemplate.Database;
 
 public sealed partial class DbContext : DataConnection
 {

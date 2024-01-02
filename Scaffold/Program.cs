@@ -10,7 +10,7 @@ using LinqToDB.Metadata;
 using LinqToDB.Naming;
 using LinqToDB.Scaffold;
 using LinqToDB.Schema;
-using VsaTemplate.Scaffold;
+using VsaApiTemplate.Scaffold;
 using Microsoft.Data.SqlClient;
 
 static int ShowHelp(string help) { Console.WriteLine(help); return 0; }
@@ -46,7 +46,7 @@ static async Task<int> Main(ProgramArguments args)
 
 static async Task<string> GenerateScaffold(ProgramArguments args)
 {
-	var dbName = "VsaTemplate_Scaffold_" + Guid.NewGuid().ToString().Replace("-", "", StringComparison.Ordinal);
+	var dbName = "VsaApiTemplate_Scaffold_" + Guid.NewGuid().ToString().Replace("-", "", StringComparison.Ordinal);
 	var cn = Regex.Unescape(args.OptConnectionString!);
 
 	await using var conn = GetSqlServerConnection(cn, "master");

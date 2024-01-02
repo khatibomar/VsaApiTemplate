@@ -1,4 +1,4 @@
-﻿namespace VsaTemplate.Features.Models;
+﻿namespace VsaApiTemplate.Features.Models;
 
 [ValueObject]
 public readonly partial struct FeatureId { }

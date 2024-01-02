@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Immutable;
 
-namespace VsaTemplate.SourceGen;
+namespace VsaApiTemplate.SourceGen;
 
 /// <summary>
 /// An immutable, equatable array. This is equivalent to <see cref="Array{T}"/> but with value equality support.

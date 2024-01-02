@@ -1,4 +1,4 @@
-﻿namespace VsaTemplate.Users.Models;
+﻿namespace VsaApiTemplate.Users.Models;
 
 [ValueObject<string>]
 public readonly partial struct Auth0UserId { }

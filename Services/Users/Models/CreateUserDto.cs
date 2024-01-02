@@ -1,4 +1,4 @@
-﻿namespace VsaTemplate.Users.Models;
+﻿namespace VsaApiTemplate.Users.Models;
 
 public sealed record CreateUserDto
 {

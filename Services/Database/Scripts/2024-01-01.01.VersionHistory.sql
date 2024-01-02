@@ -11,6 +11,6 @@ create table VersionHistory
 );
 
 insert VersionHistory(SqlFile, ExecutionStart, ExecutionEnd)
-values ('00.VersionHistory.sql', sysdatetimeoffset(), sysdatetimeoffset());
+values ('2024-01-01.01.VersionHistory.sql', sysdatetimeoffset(), sysdatetimeoffset());
 
 end

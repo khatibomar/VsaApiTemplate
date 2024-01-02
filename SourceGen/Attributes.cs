@@ -1,4 +1,4 @@
-﻿namespace VsaTemplate;
+﻿namespace VsaApiTemplate;
 
 [AttributeUsage(AttributeTargets.Enum, AllowMultiple = false)]
 internal sealed class SyncEnumAttribute : Attribute

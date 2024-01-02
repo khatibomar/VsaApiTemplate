@@ -1,4 +1,4 @@
-﻿namespace VsaTemplate.Support;
+﻿namespace VsaApiTemplate.Support;
 
 public interface IRecurringJob
 {

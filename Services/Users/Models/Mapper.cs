@@ -1,6 +1,6 @@
 ﻿using Riok.Mapperly.Abstractions;
 
-namespace VsaTemplate.Users.Models;
+namespace VsaApiTemplate.Users.Models;
 
 [Mapper]
 internal static partial class Mapper

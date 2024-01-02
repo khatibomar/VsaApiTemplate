@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using VsaTemplate.Features.Models;
-using VsaTemplate.Features.Services;
+using VsaApiTemplate.Features.Models;
+using VsaApiTemplate.Features.Services;
 
 namespace Api.Controllers.v1;
 
@@ -15,8 +15,5 @@ public class FeaturesController : ControllerBase
 		_featuresService = featuresService;
 	}
 
-	public ActionResult<IEnumerable<Feature>> Get()
-	{
-		return Ok(_featuresService.GetFeatures());
-	}
+	public ActionResult<IEnumerable<Feature>> Get() => Ok(_featuresService.GetFeatures());
 }

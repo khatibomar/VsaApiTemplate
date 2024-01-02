@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace VsaTemplate.SourceGen;
+namespace VsaApiTemplate.SourceGen;
 
 [Generator]
 public sealed partial class Generator : IIncrementalGenerator

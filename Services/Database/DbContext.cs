@@ -1,11 +1,11 @@
 ﻿using CommunityToolkit.Diagnostics;
 using LinqToDB.Data;
 using LinqToDB.DataProvider.SqlServer;
-using VsaTemplate.Support;
+using VsaApiTemplate.Support;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace VsaTemplate.Database;
+namespace VsaApiTemplate.Database;
 
 [ConfigureOptions]
 public class DbContextOptions

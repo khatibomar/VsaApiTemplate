@@ -1,11 +1,11 @@
 ﻿using CommunityToolkit.Diagnostics;
 using LinqToDB;
 using SuperLinq;
-using VsaTemplate.Database;
-using VsaTemplate.Features.Models;
-using VsaTemplate.Users.Models;
+using VsaApiTemplate.Database;
+using VsaApiTemplate.Features.Models;
+using VsaApiTemplate.Users.Models;
 
-namespace VsaTemplate.Features.Services;
+namespace VsaApiTemplate.Features.Services;
 
 [RegisterScoped]
 public class FeaturesService

@@ -1,6 +1,6 @@
 ﻿using Riok.Mapperly.Abstractions;
 
-namespace VsaTemplate.Features.Models;
+namespace VsaApiTemplate.Features.Models;
 
 [Mapper(UseDeepCloning = true)]
 public static partial class PublicMapper

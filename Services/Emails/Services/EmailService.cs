@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Diagnostics;
 using MailKit.Net.Smtp;
-using VsaTemplate.Support;
+using VsaApiTemplate.Support;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
-namespace VsaTemplate.Emails.Services;
+namespace VsaApiTemplate.Emails.Services;
 
 [ConfigureOptions]
 public sealed class EmailServiceOptions

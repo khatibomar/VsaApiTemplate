@@ -1,6 +1,6 @@
-﻿using VsaTemplate.Users.Models;
+﻿using VsaApiTemplate.Users.Models;
 
-namespace VsaTemplate.Features.Models;
+namespace VsaApiTemplate.Features.Models;
 
 public sealed record Feature
 {

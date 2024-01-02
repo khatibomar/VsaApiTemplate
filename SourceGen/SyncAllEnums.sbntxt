@@ -1,6 +1,6 @@
 ﻿using LinqToDB.Data;
 
-namespace VsaTemplate.Database;
+namespace VsaApiTemplate.Database;
 
 public sealed partial class DbContext : DataConnection
 {

@@ -2,13 +2,13 @@
   <Import Project="../Scaffold/Scaffold.targets" />
   <Import Project="Secrets.targets" Condition="Exists('Secrets.targets')" />
   <PropertyGroup>
-    <RootNamespace>VsaTemplate</RootNamespace>
+    <RootNamespace>VsaApiTemplate</RootNamespace>
     <NoWarn>$(NoWarn);CA1036;AddValidationMethod</NoWarn>
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
   <PropertyGroup Label="Scaffolder">
-    <ScaffoldContextNamespace>VsaTemplate.Database</ScaffoldContextNamespace>
-    <ScaffoldModelNamespace>VsaTemplate.Database.Models</ScaffoldModelNamespace>
+    <ScaffoldContextNamespace>VsaApiTemplate.Database</ScaffoldContextNamespace>
+    <ScaffoldModelNamespace>VsaApiTemplate.Database.Models</ScaffoldModelNamespace>
     <ScaffoldOutput>$(MSBuildThisFileDirectory)Database/Models/Scaffold.g.cs</ScaffoldOutput>
   </PropertyGroup>
   <ItemGroup Label="Scaffolder">

@@ -2,10 +2,10 @@
 using System.Text.RegularExpressions;
 using LinqToDB;
 using LinqToDB.Data;
-using VsaTemplate.Database.Models;
+using VsaApiTemplate.Database.Models;
 using Microsoft.Extensions.Logging;
 
-namespace VsaTemplate.Database;
+namespace VsaApiTemplate.Database;
 
 public partial class DbContext : DataConnection
 {
@@ -26,7 +26,7 @@ public partial class DbContext : DataConnection
 	#region Main Functions
 	private Task EnsureVersionHistoryExists() =>
 		// script does validation; always run script
-		ExecuteScript("00.VersionHistory.sql");
+		ExecuteScript("2024-01-01.01.VersionHistory.sql");
 
 	private async Task RunChangeScripts()
 	{
@@ -62,7 +62,7 @@ public partial class DbContext : DataConnection
 	#endregion
 
 	#region Execute Script
-	[GeneratedRegex("^go\\r?$", RegexOptions.IgnoreCase | RegexOptions.Multiline | RegexOptions.Compiled, "en-US")]
+	[GeneratedRegex("^go\\r?$", RegexOptions.IgnoreCase | RegexOptions.Multiline | RegexOptions.Compiled)]
 	private static partial Regex SqlBlockRegex();
 
 	private async Task ExecuteScript(string scriptName)
@@ -82,7 +82,7 @@ public partial class DbContext : DataConnection
 	#endregion
 
 	#region Embedded Scripts
-	private const string ResourcePrefix = "VsaTemplate.Database.Scripts.";
+	private const string ResourcePrefix = "VsaApiTemplate.Database.Scripts.";
 	private static List<string> GetEmbeddedScripts() =>
 		Assembly.GetExecutingAssembly()
 			.GetManifestResourceNames()
@@ -97,10 +97,10 @@ public partial class DbContext : DataConnection
 	[LoggerMessage(Level = LogLevel.Error, Message = "Unable to run script '{ScriptName}'.")]
 	private partial void LogUnableToRunScript(Exception ex, string scriptName);
 
-	[LoggerMessage(Level = LogLevel.Information, Message = "Initializing VsaTemplate DB")]
+	[LoggerMessage(Level = LogLevel.Information, Message = "Initializing VsaApiTemplate DB")]
 	private partial void LogInitializingDb();
 
-	[LoggerMessage(Level = LogLevel.Information, Message = "VsaTemplate DB Initialized")]
+	[LoggerMessage(Level = LogLevel.Information, Message = "VsaApiTemplate DB Initialized")]
 	private partial void LogDbInitialized();
 
 	#endregion

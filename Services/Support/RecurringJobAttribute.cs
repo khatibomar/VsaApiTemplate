@@ -1,4 +1,4 @@
-﻿namespace VsaTemplate.Support;
+﻿namespace VsaApiTemplate.Support;
 
 [AttributeUsage(AttributeTargets.Class)]
 public sealed class RecurringJobAttribute : Attribute

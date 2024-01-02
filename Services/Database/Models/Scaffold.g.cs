@@ -10,12 +10,12 @@ using LinqToDB.Data;
 using LinqToDB.Mapping;
 using System;
 using System.Collections.Generic;
-using VsaTemplate.Database.Models;
+using VsaApiTemplate.Database.Models;
 
 #pragma warning disable 1573, 1591
 #nullable enable
 
-namespace VsaTemplate.Database
+namespace VsaApiTemplate.Database
 {
 	public partial class DbContext : DataConnection
 	{
@@ -27,7 +27,7 @@ namespace VsaTemplate.Database
 		public ITable<VersionHistory> VersionHistories => this.GetTable<VersionHistory>();
 	}
 }
-namespace VsaTemplate.Database.Models
+namespace VsaApiTemplate.Database.Models
 {
 	[Table("Feature")]
 	public class Feature
