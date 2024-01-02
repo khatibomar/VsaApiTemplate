@@ -15,5 +15,6 @@ public class FeaturesController : ControllerBase
 		_featuresService = featuresService;
 	}
 
-	public ActionResult<IEnumerable<Feature>> Get() => Ok(_featuresService.GetFeatures());
+	[HttpGet]
+	public async Task<ActionResult<IReadOnlyList<Feature>>> GetAsync() => Ok(await _featuresService.GetFeatures());
 }
