@@ -147,10 +147,10 @@ try
 		"/hangfire",
 		new DashboardOptions
 		{
-			Authorization = new[]
-			{
-				new RolesBasedAuthorizationFilter(["Admin"])
-			}
+			Authorization =
+			[
+				new RolesBasedAuthorizationFilter(["Admin"]),
+			],
 		});
 
 	app.UseSerilogRequestLogging(o =>

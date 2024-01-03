@@ -40,3 +40,49 @@
     <PackageReference Update="SuperLinq" Version="5.4.0" />
   </ItemGroup>
 </Project>
+
+	<Import Project="../Scaffold/Scaffold.targets" />
+	<Import Project="Secrets.targets" Condition="Exists('Secrets.targets')" />
+
+	<PropertyGroup>
+		<RootNamespace>VsaTemplate</RootNamespace>
+		<NoWarn>$(NoWarn);CA1036;AddValidationMethod</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Label="Scaffolder">
+		<ScaffoldContextNamespace>VsaTemplate.Database</ScaffoldContextNamespace>
+		<ScaffoldModelNamespace>VsaTemplate.Database.Models</ScaffoldModelNamespace>
+		<ScaffoldOutput>$(MSBuildThisFileDirectory)Database/Models/Scaffold.g.cs</ScaffoldOutput>
+	</PropertyGroup>
+
+	<ItemGroup Label="Scaffolder">
+		<None Remove="Database/Scripts/*.sql" />
+		<EmbeddedResource Include="Database/Scripts/*.sql" Script="true" />
+	</ItemGroup>
+
+	<ItemGroup Label="Usings">
+		<Using Include="Vogen" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="../Scaffold/Scaffold.csproj" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="../SourceGen/SourceGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoRegisterInject" PrivateAssets="All" />
+		<PackageReference Include="CommunityToolkit.Diagnostics" />
+		<PackageReference Include="linq2db" />
+		<PackageReference Include="MailKit" />
+		<PackageReference Include="Microsoft.Data.SqlClient" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+		<PackageReference Include="Microsoft.Extensions.Options" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+		<PackageReference Include="Riok.Mapperly" />
+		<PackageReference Include="System.Linq.Async" />
+		<PackageReference Include="Vogen" />
+		<PackageReference Include="SuperLinq" />
+	</ItemGroup>
+
+</Project>
