@@ -1,40 +1,32 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Auth0.AspNetCore.Authentication" Version="1.4.0" />
-    <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="6.2.0" />
-    <PackageReference Include="Hangfire" Version="1.8.7" />
-    <PackageReference Include="Serilog" Version="3.1.1" />
-    <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
-    <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
-    <PackageReference Include="Serilog.Exceptions.MsSqlServer" Version="8.4.0" />
-    <PackageReference Include="Serilog.Exceptions.Refit" Version="8.4.0" />
-    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
-    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
-    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
-    <PackageReference Include="Serilog.Sinks.Seq" Version="6.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="ThisAssembly.Git" Version="1.4.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Auth0.AspNetCore.Authentication" />
+		<PackageReference Include="AutoRegisterInject" PrivateAssets="All" />
+		<PackageReference Include="DryIoc.dll" />
+		<PackageReference Include="DryIoc.Microsoft.DependencyInjection" />
+		<PackageReference Include="Hangfire" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+		<PackageReference Include="Radzen.Blazor" />
+		<PackageReference Include="Swashbuckle.AspNetCore" />
+		<PackageReference Include="Serilog.AspNetCore" />
+		<PackageReference Include="Serilog.Enrichers.Environment" />
+		<PackageReference Include="Serilog.Exceptions" />
+		<PackageReference Include="Serilog.Exceptions.MsSqlServer" />
+		<PackageReference Include="Serilog.Exceptions.Refit" />
+		<PackageReference Include="Serilog.Settings.Configuration" />
+		<PackageReference Include="Serilog.Sinks.Seq" />
+		<PackageReference Include="ThisAssembly.Git" PrivateAssets="All" />
+	</ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <ProjectReference Include="..\..\Services\Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="CommunityToolkit.Diagnostics" Version="8.2.2" />
-    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
-    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
-    <PackageReference Update="SuperLinq" Version="5.4.0" />
   </ItemGroup>
 
 </Project>

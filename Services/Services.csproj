@@ -1,57 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="../Scaffold/Scaffold.targets" />
-  <Import Project="Secrets.targets" Condition="Exists('Secrets.targets')" />
-  <PropertyGroup>
-    <RootNamespace>VsaApiTemplate</RootNamespace>
-    <NoWarn>$(NoWarn);CA1036;AddValidationMethod</NoWarn>
-    <TargetFramework>net8.0</TargetFramework>
-  </PropertyGroup>
-  <PropertyGroup Label="Scaffolder">
-    <ScaffoldContextNamespace>VsaApiTemplate.Database</ScaffoldContextNamespace>
-    <ScaffoldModelNamespace>VsaApiTemplate.Database.Models</ScaffoldModelNamespace>
-    <ScaffoldOutput>$(MSBuildThisFileDirectory)Database/Models/Scaffold.g.cs</ScaffoldOutput>
-  </PropertyGroup>
-  <ItemGroup Label="Scaffolder">
-    <None Remove="Database/Scripts/*.sql" />
-    <EmbeddedResource Include="Database/Scripts/*.sql" Script="true" />
-  </ItemGroup>
-  <ItemGroup Label="Usings">
-    <Using Include="Vogen" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="../Scaffold/Scaffold.csproj" ReferenceOutputAssembly="false" />
-    <ProjectReference Include="../SourceGen/SourceGen.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="linq2db" Version="5.3.2" />
-    <PackageReference Include="MailKit" Version="4.3.0" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
-    <PackageReference Include="Riok.Mapperly" Version="3.3.0" />
-    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
-    <PackageReference Include="Vogen" Version="3.0.23" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="CommunityToolkit.Diagnostics" Version="8.2.2" />
-    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
-    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
-    <PackageReference Update="SuperLinq" Version="5.4.0" />
-  </ItemGroup>
-</Project>
 
 	<Import Project="../Scaffold/Scaffold.targets" />
 	<Import Project="Secrets.targets" Condition="Exists('Secrets.targets')" />
 
 	<PropertyGroup>
-		<RootNamespace>VsaTemplate</RootNamespace>
+		<RootNamespace>VsaApiTemplate</RootNamespace>
 		<NoWarn>$(NoWarn);CA1036;AddValidationMethod</NoWarn>
 	</PropertyGroup>
 
 	<PropertyGroup Label="Scaffolder">
-		<ScaffoldContextNamespace>VsaTemplate.Database</ScaffoldContextNamespace>
-		<ScaffoldModelNamespace>VsaTemplate.Database.Models</ScaffoldModelNamespace>
+		<ScaffoldContextNamespace>VsaApiTemplate.Database</ScaffoldContextNamespace>
+		<ScaffoldModelNamespace>VsaApiTemplate.Database.Models</ScaffoldModelNamespace>
 		<ScaffoldOutput>$(MSBuildThisFileDirectory)Database/Models/Scaffold.g.cs</ScaffoldOutput>
 	</PropertyGroup>
 

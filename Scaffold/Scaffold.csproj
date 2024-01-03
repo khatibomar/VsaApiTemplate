@@ -11,7 +11,6 @@
 
 		<!-- Because SG doesn't respect .editorconfig -->
 		<NoWarn>CA1852</NoWarn>
-		<TargetFramework>net8.0</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
