@@ -149,7 +149,7 @@ try
 		{
 			Authorization = new[]
 			{
-				new RolesBasedAuthorizationFilter(new[] { "Admin" })
+				new RolesBasedAuthorizationFilter(["Admin"])
 			}
 		});
 

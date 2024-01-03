@@ -22,8 +22,8 @@ public class HangfireJobIdEnricher : ILogEventEnricher, IServerFilter
 		}
 	}
 
-	public void OnPerforming(PerformingContext filterContext) =>
-		s_hangfireJobId.Value = filterContext?.BackgroundJob?.Id;
-	public void OnPerformed(PerformedContext filterContext) =>
+	public void OnPerforming(PerformingContext context) =>
+		s_hangfireJobId.Value = context?.BackgroundJob?.Id;
+	public void OnPerformed(PerformedContext context) =>
 		s_hangfireJobId.Value = null;
 }
